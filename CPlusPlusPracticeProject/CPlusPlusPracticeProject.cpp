@@ -5,7 +5,11 @@
 
 int main()
 {
-    std::cout << "Roses are red\n" << "Violets are blue\n" << "Python is slow\n" << "and so are you!\n";
+    int testInt = 7;
+    float testFloat = 3.14f;
+    bool hasUserLostTheGame = true;
+    char testChar = 'c';
+    std::cout << "Roses are red\n" << "Violets are blue\n" << "Python is slow\n" << "and so are you!\n" << testChar;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

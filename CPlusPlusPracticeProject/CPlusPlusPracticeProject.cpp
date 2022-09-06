@@ -17,6 +17,34 @@ int main()
         "And you will know My name is the Lord when I lay my vengeance upon thee.";
     std::string truncatedParagraph = testParagraph.substr(0, 20);
     std::cout << "Roses are red\n" << "Violets are blue\n" << "Python is slow\n" << "and so are you!\n" << truncatedParagraph;
+
+    int errorCode = 2;
+
+    switch (errorCode)
+    {
+    case 0: 
+    {
+        std::cout << "error was 0!\n";
+        break;
+    }
+    case 1:
+    {
+        std::cout << "error was 1!\n";
+        break;
+    }
+    case 2:
+    {
+        std::cout << "error was 2!\n";
+        break;
+    }
+       
+    default: {
+        std::cout << "error was unrecoginsed\n";
+    }
+        break;
+    }
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

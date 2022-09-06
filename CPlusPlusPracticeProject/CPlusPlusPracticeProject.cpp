@@ -4,8 +4,14 @@
 #include <iostream>
 #include <string>
 
+void BasicFunction() 
+{
+    std::cout << "basic function ran!\n";
+}
+
 int main()
 {
+    BasicFunction();
     int testInt = 7;
     float testFloat = 3.14f;
     bool hasUserLostTheGame = true;
@@ -18,31 +24,55 @@ int main()
     std::string truncatedParagraph = testParagraph.substr(0, 20);
     std::cout << "Roses are red\n" << "Violets are blue\n" << "Python is slow\n" << "and so are you!\n" << truncatedParagraph;
 
-    int errorCode = 2;
+    //input
+    /*
+    int userSelection = 0;
+    std::cout << "select a direction using a number from 0-2 \n" << "North = 0\n" << "East = 1\n" << "West = 2\n";
+    std::cin >> userSelection;
 
-    switch (errorCode)
+    
+
+    switch (userSelection)
     {
-    case 0: 
+    case 0:
     {
-        std::cout << "error was 0!\n";
+        std::cout << "You walk towards a towering castle, surrounded by a moat with a drawbridge. The drawbridge is closed so you cannot cross.\n";
         break;
     }
     case 1:
     {
-        std::cout << "error was 1!\n";
+        std::cout << "You walk along a narrow path that follows the side of a ravine. A river surges below,the rapids bubbling violently.\n";
         break;
     }
     case 2:
     {
-        std::cout << "error was 2!\n";
+        std::cout << "You walk into a wildflower meadow. The scent of wildflowers filling the air.\n";
         break;
     }
        
     default: {
-        std::cout << "error was unrecoginsed\n";
+        std::cout << "invalid direction\n";
     }
         break;
     }
+    */
+
+    int searchResults = 3;
+    std::string google ="g";
+    std::string gle = "gle";
+        for (int i = 0; i < searchResults; ++i)
+        {
+            google += "o";
+        }
+        
+        google += "gle";
+
+        std::cout << google;
+
+
+
+
+   
 
 
 }

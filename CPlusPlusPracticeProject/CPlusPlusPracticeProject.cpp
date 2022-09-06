@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <string>
 
 int main()
 {
@@ -9,7 +10,13 @@ int main()
     float testFloat = 3.14f;
     bool hasUserLostTheGame = true;
     char testChar = 'c';
-    std::cout << "Roses are red\n" << "Violets are blue\n" << "Python is slow\n" << "and so are you!\n" << testChar;
+    std::string testParagraph = "The path of the righteous man is beset on all sides by the Inequities of the selfish and the tyranny of evil men." 
+        "Blessed is he who, in The name of charityand good will, shepherds the weak through the valley of Darkness," 
+        "for he is truly his brother's keeper and the finder of lost Children."
+        "And I will strike down upon thee with great vengeance and furious Anger those who attempt to poison and destroy my brothers."
+        "And you will know My name is the Lord when I lay my vengeance upon thee.";
+    std::string truncatedParagraph = testParagraph.substr(0, 20);
+    std::cout << "Roses are red\n" << "Violets are blue\n" << "Python is slow\n" << "and so are you!\n" << truncatedParagraph;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

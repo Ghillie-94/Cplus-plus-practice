@@ -9,9 +9,35 @@ void BasicFunction()
     std::cout << "basic function ran!\n";
 }
 
+// there exists a function called EarlyDeclare
+// this is called a forward declaration 
+void EarlyDeclare();
+
+
+void ParameterFunc(int paramaJam)
+{
+    //woah black betty..
+    ++paramaJam;
+    std::cout << "parameterFunc ran - paramaJam = " << paramaJam << "!\n";
+}
+
+int ReturnFunc()
+{
+    return 42;
+}
+
 int main()
 {
     BasicFunction();
+    
+    // like saying paramJam = testJam
+    int testJam = 4;
+    ParameterFunc(testJam);
+
+    int returnValue = ReturnFunc();
+    std::cout << "returnValue = " << returnValue << "!\n";
+
+
     int testInt = 7;
     float testFloat = 3.14f;
     bool hasUserLostTheGame = true;
@@ -75,6 +101,13 @@ int main()
    
 
 
+}
+
+// implentation for early declare that was declared at the top
+// name must match exactly
+void EarlyDeclare()
+{
+    std::cout << "Early declare function ran!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

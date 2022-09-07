@@ -96,7 +96,10 @@ int main()
         std::cout << google;
 
 
-
+    //static array
+    int intArray[] = { 0, 1, 2 };
+    const int intArraySize = 3;
+    int intArrayB[intArraySize];
 
    
 

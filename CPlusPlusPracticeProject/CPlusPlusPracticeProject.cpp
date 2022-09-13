@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <stdlib.h> // to use rand()
+#include <time.h> // used to seed rand
 
 void BasicFunction() 
 {
@@ -29,7 +32,24 @@ int ReturnFunc()
 int main()
 {
     BasicFunction();
-    
+
+    // Generate a random number
+    // anywhere from 0 - to RAND_MAX (very very large)
+    int totallyRandom = std::rand();
+    std::cout << "Random number is: " << totallyRandom << "\n";
+
+    // a seed is a starting point for random calculations
+    //int seed = 100;
+    std::srand(time(NULL));
+    //between two numbers
+    int lowerNumber = 50;
+    int higherNumber = 150;
+    int range = higherNumber - lowerNumber;
+    int seededRandom = std::rand() % range + lowerNumber;
+    std::cout << "Seeded random number is: " << seededRandom << "\n";
+
+
+
     // like saying paramJam = testJam
     int testJam = 4;
     ParameterFunc(testJam);
@@ -101,7 +121,47 @@ int main()
     const int intArraySize = 3;
     int intArrayB[intArraySize];
 
+
+    //declare a vector
+    std::vector<int> intVector;
+
+    //Add items to the vectore using a function called push_back and it adds to the back end of the vector
+
+    intVector.push_back(1); // Vector = { 1 }
+    intVector.push_back(2); // Vector { 1, 2 }
+    intVector.push_back(36); // Vector { 1, 2, 36 }
+    intVector.push_back(40); // Vector { 1, 2, 36, 40 }
+    intVector.push_back(111); // Vector { 1, 2, 36, 40, 111 }
+
+    // you can get the current size of the vector
+    // using vectorName.size()
+    std::cout << "\n" << "Vector is " << intVector.size() << "\n";
+
+    // you can access items in a vector just like an array
+    std::cout << "Vector index 0 is " << intVector[0] << "\n";
+
+    //change the value of an item,
+    //just like an array
+    //be careful!! the element must exist for this to work
+    intVector[1] = 5;
+    std::cout << "Vector index 1 is " << intVector[1] << "\n";
    
+    // items can be removed using the erase() function
+    //erase uses iterators
+    // an iterator is like a marker for a particular point in the vector (or counter)
+    //lets erase the first two elements
+    //parameter 1 - starting point
+    //parameter 2 - and before this point
+    intVector.erase(intVector.begin(), intVector.begin() + 2);
+
+    std::cout << "\n" << "Vector is " << intVector.size() << "\n";
+    std::cout << "Vector index 0 is " << intVector[0] << "\n";
+
+    // print out all elements of an array
+    for (int i = 0; i < intVector.size(); ++i)
+    {
+        std::cout << intVector[i] << " ";
+    }
 
 
 }
